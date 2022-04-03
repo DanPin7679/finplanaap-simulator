@@ -43,10 +43,12 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "starter",
+      name: "simulator",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./Simulator": "./src/charts/ChartManager",
+      },
       shared: {
         ...deps,
         react: {
