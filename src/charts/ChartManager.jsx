@@ -20,6 +20,7 @@ function ChartManager() {
   const margin = 40;
   return (
     <div>
+      <h3>Charts</h3>
       <PieChartContainer
         width={width}
         height={height}
